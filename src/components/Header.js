@@ -21,7 +21,7 @@ export const Header = () => {
       </Box>
         <Box display="flex" alignItems="flex-end">
           <Box display="flex">
-            <Box>GIỎ HÀNG</Box>
+            <Box>GIỎ HÀNGs</Box>
             <Box><AddShoppingCartIcon fontSize="small"/></Box>
           </Box>
           <Box marginLeft="10px" display="flex" alignItems="flex-end">
