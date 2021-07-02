@@ -3,11 +3,22 @@ import { Grid, Box, makeStyles, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: 440,
+    // overflow: "hidden",
+    // height: 440,
+    // [theme.breakpoints.down("md")]: {
+    //   height: 400,
+    // },
+    // [theme.breakpoints.down("sm")]: {
+    //   height: 350,
+    // },
+    // [theme.breakpoints.down("xs")]: {
+    //   height: 300,
+    // },
     "&:hover .btnDetail": {
       opacity: 1,
       visibility: "visible",
-      transition: "0.5s linear",
+      // transition: "0.5s linear",
+      animation: `$animationTop 0.3s ${theme.transitions.easing.easeInOut}`,
     },
     "&:hover .contentProduct": {
       display: "none",
@@ -39,8 +50,11 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     opacity: 0,
     visibility: "hidden",
+    // animation: `$animationBottom 0.3s ${theme.transitions.easing.easeInOut}`,
+    // animation: `$animationTop 1s ${theme.transitions.easing.easeInOut}`,
     // transform: "translate3d(0, 0, 0)",
     // transition: "0.5s linear",
+    transform: "translateY(40%)",
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
     },
@@ -77,6 +91,22 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "line-through",
     color: "#bbb",
     marginLeft: 12,
+  },
+  "@keyframes animationTop": {
+    "0%": {
+      transform: "translateY(100%)",
+    },
+    "100%": {
+      transform: "translateY(40%)",
+    },
+  },
+  "@keyframes animationBottom": {
+    "0%": {
+      transform: "translateY(40%)",
+    },
+    "100%": {
+      transform: "translateY(100%)",
+    },
   },
   "@keyframes fade-in": {
     "0%": {

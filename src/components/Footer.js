@@ -110,6 +110,21 @@ const useStyles = makeStyles((theme) => ({
     padding: "15px 20px !important",
     justifyContent: "space-around",
   },
+  logo: {
+    width: 280,
+    [theme.breakpoints.down("lg")]: {
+      width: 240,
+    },
+    [theme.breakpoints.down("md")]: {
+      width: 190,
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: 230,
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: 230,
+    },
+  },
 }));
 
 export const Footer = () => {
@@ -121,7 +136,7 @@ export const Footer = () => {
       <Box className={classes.container}>
         <Grid container spacing={4}>
           <Grid item md={3} sm={6} className={classes.itemFooter}>
-            <Box width={isDesktop ? "280px" : "180px"}>
+            <Box className={classes.logo}>
               <img
                 alt="error image"
                 src="https://bizweb.dktcdn.net/100/414/728/themes/803486/assets/logo.png?1624099047427"

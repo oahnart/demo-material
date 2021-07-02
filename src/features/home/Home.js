@@ -314,7 +314,7 @@ export const Home = () => {
           <ButtonViewDetail name="XEM TẤT CẢ . NEW ARRIVAL" />
         </Box>
         <Grid container spacing={3}>
-          <Grid item xl={4} md={6} sm={12}>
+          <Grid item xl={4} md={4} sm={6} xs={12}>
             <Box className={classes.imageCategory}>
               <img
                 width="100%"
@@ -336,7 +336,7 @@ export const Home = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xl={4} md={6} sm={12}>
+          <Grid item xl={4} md={4} sm={6} xs={12}>
             <Box className={classes.imageCategory}>
               <img
                 width="100%"
@@ -356,7 +356,7 @@ export const Home = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xl={4} md={6} sm={12}>
+          <Grid item xl={4} md={4} sm={6} xs={12}>
             <Box className={classes.imageCategory}>
               <img
                 width="100%"

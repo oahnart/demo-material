@@ -41,10 +41,17 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     left: 11,
     bottom: 12,
-    padding: "0 6px",
     color: "white",
     backgroundColor: "black",
     borderRadius: 20,
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textIndent: 3,
+    height: 20,
+    lineHeight: 20,
+    minWidth: 20,
+    fontSize: 11,
   },
   button: {
     fontWeight: 600,
@@ -73,10 +80,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   search: {
-    transform: "translateY(-20%)",
+    // transform: "translateY(-20%)",
     marginLeft: "25px",
     display: "flex",
     alignItems: "flex-end",
+  },
+  logo: {
+    cursor: "pointer",
   },
 }));
 
@@ -106,7 +116,12 @@ export const Header = () => {
           >
             {isDesktop ? (
               <>
-                HOTLINE ĐẶT HÀNG: <strong>058660 8660</strong>
+                HOTLINE ĐẶT HÀNG:{" "}
+                <strong>
+                  <Link href="#" color="inherit">
+                    058660 8660
+                  </Link>
+                </strong>
               </>
             ) : (
               <Link onClick={toggleDrawer(true)} color="#000">
@@ -115,11 +130,13 @@ export const Header = () => {
             )}
           </Box>
           <Box width={isDesktop ? "280px" : "180px"}>
-            <img
-              width="100%"
-              alt="error image"
-              src="https://bizweb.dktcdn.net/100/414/728/themes/803486/assets/logo.png?1624099047427"
-            />
+            <Link className={classes.logo} href="#">
+              <img
+                width="100%"
+                alt="error image"
+                src="https://bizweb.dktcdn.net/100/414/728/themes/803486/assets/logo.png?1624099047427"
+              />
+            </Link>
           </Box>
           <Box
             display="flex"
@@ -130,12 +147,16 @@ export const Header = () => {
             <Box display="flex">
               {isDesktop && <Box>GIỎ HÀNG</Box>}
               <Box position="relative">
-                <AddShoppingCartIcon fontSize="small" />
+                <Link href="#" color="inherit">
+                  <AddShoppingCartIcon fontSize="small" />
+                </Link>
                 <Box className={classes.quantity}>0</Box>
               </Box>
             </Box>
             <Box className={classes.search}>
-              <SearchIcon fontSize="small" />
+              <Link href="#" color="inherit">
+                <SearchIcon fontSize="small" />
+              </Link>
             </Box>
           </Box>
         </Box>
